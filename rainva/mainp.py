@@ -120,15 +120,6 @@ class MainThread(QThread):
                             song = self.text.replace('play', '')
                             speak('playing ' + song)
                             pywhatkit.playonyt(song)
-                        elif 'skip' in self.text:
-                            pyautogui.moveTo(1131,706)
-                            pyautogui.leftClick()
-                        elif 'pause the video' in self.text:
-                            speak('pausing..')
-                            pyautogui.press('space')
-                        elif 'stop the video' in self.text:
-                            speak('stop playing')
-                            pyautogui.hotkey('ctrl','w')
                         elif 'open chrome' in self.text or 'google' in self.text:
                             speak('opening chrome')
                             os.startfile("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe")
